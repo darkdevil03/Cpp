@@ -1,5 +1,12 @@
+/*
+    Complete <iostream> Reference
+    Tip: Both cin and cout belongs to the <iostream> library, which is short for standard input / output streams.
+    For a complete reference of <iostream> objects along with detailed information, go to our C++ iostream Reference.
+ */
+
 #include <iostream>
 using namespace std;
+
 int main() {
     string name;
 
