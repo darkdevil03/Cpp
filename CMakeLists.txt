@@ -15,6 +15,8 @@ list(FILTER CPP_FILES EXCLUDE REGEX "cmake-build-")
 # 3. Loop through the safe files and create an executable for each
 foreach(FILE ${CPP_FILES})
     get_filename_component(TARGET_NAME ${FILE} NAME_WE)
-    # Just the target name and the single file variable. Nothing else!
     add_executable(${TARGET_NAME} ${FILE})
+
+    # NEW LINE: Force this specific target to output to the build directory
+    set_target_properties(${TARGET_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
 endforeach()
