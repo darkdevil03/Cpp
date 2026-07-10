@@ -15,5 +15,6 @@ list(FILTER CPP_FILES EXCLUDE REGEX "cmake-build-")
 # 3. Loop through the safe files and create an executable for each
 foreach(FILE ${CPP_FILES})
     get_filename_component(TARGET_NAME ${FILE} NAME_WE)
-    add_executable(${TARGET_NAME} ${FILE})
+    add_executable(${TARGET_NAME} ${FILE}
+            basics-of-cpp/Ex03_Comments.cpp)
 endforeach()
