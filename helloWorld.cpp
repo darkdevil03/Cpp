@@ -42,7 +42,9 @@ int main() {
     // Every C++ statement ends with a semicolon ;
     // cout: is an object used together with the insertion operator (<<) to output/print text.
     // C++ is case-sensitive: "cout" and "Cout" has different meaning.
-    cout << "Hello World!" << endl;
+    cout << "Hello World! without std" << endl;
+    // for omitting namespace
+    std::cout << "Hello World! with std" << std::endl;
 
     // ends the main function.
     return 0;
