@@ -51,5 +51,17 @@ int main () {
     cout << "Before changes in first name, first char updated to :" << firstName << endl;
     firstName[0] = 'k';
     cout << "After changes in first name, first char updated to : " << firstName << endl;
+
+    /*
+    5. The at() function
+        The <string> library also has an at() function that can be used to access characters in a string:
+     */
+    cout << "First character : " << firstName.at(0) << endl;  //
+    cout << "Second character : " << firstName.at(1) << endl;
+    cout << "Last character : " << firstName.at(firstName.length() - 1) << endl;
+
+    firstName.at(0) = 'J';
+    cout << "After changes in first name using at function, first char updated to :" << firstName << endl;
+
     return 0;
 }
