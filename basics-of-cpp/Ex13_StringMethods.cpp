@@ -36,5 +36,10 @@ int main () {
     // Space also count as char. So, consider it into length.
     cout << "Full Name Length: " << fullNameAppend.length() << endl;
 
+    /*
+     4. Access Strings
+        We can access the characters in a string by referring to its index number inside square brackets [].
+     */
+    cout << "In first name, first char : " << firstName[0]  << endl;
     return 0;
 }
