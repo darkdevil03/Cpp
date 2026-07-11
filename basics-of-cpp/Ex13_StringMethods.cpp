@@ -37,11 +37,19 @@ int main () {
     cout << "Full Name Length: " << fullNameAppend.length() << endl;
 
     /*
-     4. Access Strings
+     4. a) Access Strings
         We can access the characters in a string by referring to its index number inside square brackets [].
      */
     cout << "In first name, first char : " << firstName[0]  << endl;
     cout << "In last name, last char : " << lastName[lastName.length() - 1]  << endl;
 
+    /*
+    4. b) Change String Characters
+        To change the value of a specific character in a string,
+        refer to the index number, and use single quotes:
+     */
+    cout << "Before changes in first name, first char updated to :" << firstName << endl;
+    firstName[0] = 'k';
+    cout << "After changes in first name, first char updated to : " << firstName << endl;
     return 0;
 }
