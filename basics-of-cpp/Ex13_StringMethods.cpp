@@ -41,5 +41,7 @@ int main () {
         We can access the characters in a string by referring to its index number inside square brackets [].
      */
     cout << "In first name, first char : " << firstName[0]  << endl;
+    cout << "In last name, last char : " << lastName[lastName.length() - 1]  << endl;
+
     return 0;
 }
