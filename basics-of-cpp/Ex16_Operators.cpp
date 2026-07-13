@@ -107,7 +107,7 @@ int main() {
 	cout << "|        3. Comparison Operators         |" << endl;
 	cout << "------------------------------------------" << endl;
 
-
+	cout << "--------- For Comparison Operator --------"<< endl;
 	int operator_i , operator_j ;
 	cout << "Enter the int value for operator_i : "; cin >> operator_i;
 	cout << "Enter the int value for operator_j : "; cin >> operator_j;
@@ -137,6 +137,25 @@ int main() {
 	cout << "|          4. Logical Operators          |" << endl;
 	cout << "------------------------------------------" << endl;
 
+	// int operator_i , operator_j ;
+	cout << "--------- For Logical Operator --------"<< endl;
+	cout << "Enter the int value for operator_i : "; cin >> operator_i;
+	cout << "Enter the int value for operator_j : "; cin >> operator_j;
+
+	// Printing input operator values :
+	cout << "x = "<< x <<"; \t operator_i = " << operator_i << "; \t operator_j = " << operator_j << endl;
+
+	// Logical and : Returns true if both statements are true
+	cout << "Logical AND operation : " << "((" << x << " < " << operator_i << ") && (" << x << ">" << operator_j << ")) = "
+		 << (x < operator_i && x > operator_j) << endl;
+
+	// 	Logical or : Returns true if one of the statements is true
+	cout << "Logical OR operation : " << "((" << x << " < " << operator_i << ") || (" << x << ">" << operator_j << ")) = "
+		 << (x < operator_i || x > operator_j) << endl;
+
+	// Logical not : Reverse the result, returns false if the result is true
+	cout << "Logical NOT  : " << "!(" << x << " < " << operator_i << ") = "
+		 << !(x < operator_i) << endl;
 
 
     return 0;
