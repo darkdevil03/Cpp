@@ -1,6 +1,18 @@
 #include <iostream>
 using namespace std;
+/*
+	Order of Operations
+		Here are some common operators in C++, from highest to lowest priority:
 
+		() : Parentheses
+		*, /, % : Multiplication, Division, Modulus
+		+, - : Addition, Subtraction
+		>, <, >=, <= : Comparison
+		==, != : Equality
+		&& : Logical AND
+		|| : Logical OR
+		= : Assignment
+ */
 int main() {
 
     cout << "------------------------------------------" << endl;
@@ -156,6 +168,7 @@ int main() {
 	// Logical not : Reverse the result, returns false if the result is true
 	cout << "Logical NOT  : " << "!(" << x << " < " << operator_i << ") = "
 		 << !(x < operator_i) << endl;
+
 
 
     return 0;
