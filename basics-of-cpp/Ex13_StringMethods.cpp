@@ -2,6 +2,12 @@
 #include <string>
 
 using namespace std;
+/*
+    C++ string Library
+        The <string> library has many functions that allow us to perform tasks on strings.
+        For more : https://www.w3schools.com/cpp/cpp_ref_string.asp
+ */
+
 int main () {
 
     string firstName, lastName;
