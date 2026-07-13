@@ -95,6 +95,48 @@ int main() {
 	x <<= 2; // same as	x = x << 2
 	cout << "x <<= 2 => "<< "{ x = " << x << " }" <<  endl;
 
+	/*
+	3. Comparison Operators
+		It used to compare two values (or variables).
+		This is important in programming, because it helps us to find answers and make decisions.
+		The return value of a comparison is either 1 or 0, which means true (1) or false (0).
+		These values are known as Boolean values, and we will learn more about them in the Booleans and If..Else concept.
+	 */
+
+	cout << "------------------------------------------" << endl;
+	cout << "|        3. Comparison Operators         |" << endl;
+	cout << "------------------------------------------" << endl;
+
+
+	int operator_i , operator_j ;
+	cout << "Enter the int value for operator_i : "; cin >> operator_i;
+	cout << "Enter the int value for operator_j : "; cin >> operator_j;
+
+	// Printing input operator values :
+	cout << "operator_i = " << operator_i << "operator_j = " << operator_j << endl;
+	// Equal to
+	cout << "Checking operator_ i Equal to operator_j : " << (operator_i == operator_j) << endl;
+	// 	Not equal
+	cout << "Checking operator_ i Not Equal to operator_j : " << (operator_i != operator_j) << endl;
+	// Greater than
+	cout << "Checking operator_ i Greater than operator_j : " << (operator_i > operator_j) << endl;
+	// Less than
+	cout << "Checking operator_ i Less than operator_j : " << (operator_i < operator_j) << endl;
+	// Greater than or equal to
+	cout << "Checking operator_ i Greater than or Equal to operator_j : " << (operator_i >= operator_j) << endl;
+	// Less than or equal to
+	cout << "Checking operator_ i Less than or Equal to operator_j : " << (operator_i <= operator_j) << endl;
+
+
+	/*
+	4. Logical Operators
+		As with comparison operators, we can also test for true (1) or false (0) values with logical operators.
+		Logical operators are used to determine the logic between variables or values.
+	 */
+	cout << "------------------------------------------" << endl;
+	cout << "|          4. Logical Operators          |" << endl;
+	cout << "------------------------------------------" << endl;
+
 
 
     return 0;
