@@ -47,6 +47,55 @@ int main() {
     cout << "Pre-Decrement : val_2 = "<< val_2 <<"  decreased by 1 using -- then return in same line : " << --val_2 << endl;
     cout << "Post-Decrement : current val_2 return " << val_2-- << " and then decreased by 1 using -- : " << val_2 << endl;
 
+    cout << endl;
+
+    /*
+    2. Assignment Operators : used to assign values to variables.
+     */
+    cout << "------------------------------------------" << endl;
+    cout << "|         2. Assignment Operator         |" << endl;
+    cout << "------------------------------------------" << endl;
+
+    // In the example below, we use the assignment operator (=) to assign the value 25 to a variable called x:
+    int x = 25;
+    cout << "x = " << x << endl;
+
+    cout << "------------------------------------------" << endl;
+    cout << "|  Addition compound assignment Operator |" << endl;
+    cout << "------------------------------------------" << endl;
+
+    // The addition compound assignment operator (such as +=, -= , etc...) adds a value to a variable:
+    x += 3; // same as x = x + 3;
+    cout << "x += 3 => "<< "{ x = " << x << " }" <<  endl;
+
+    x -= 3; // same as	x = x - 3
+    cout << "x -= 3 => "<< "{ x = " << x << " }" <<  endl;
+
+	x *= 3; // same as	x = x * 3
+	cout << "x *= 3 => "<< "{ x = " << x << " }" <<  endl;
+
+	x /= 3; // same as	x = x / 3
+	cout << "x /= 3 => "<< "{ x = " << x << " }" <<  endl;
+
+	x %= 3; // same as	x = x % 3
+	cout << "x %= 3 => "<< "{ x = " << x << " }" <<  endl;
+
+	x &= 3; // same as	x = x & 3
+	cout << "x &= 3 => "<< "{ x = " << x << " }" <<  endl;
+
+	x |= 3; // same as	x = x | 3
+	cout << "x |= 3 => "<< "{ x = " << x << " }" <<  endl;
+
+	x ^= 8; // same as	x = x ^ 8
+	cout << "x ^= 8 => "<< "{ x = " << x << " }" <<  endl;
+
+	x >>= 1; // same as	x = x >> 1
+	cout << "x >>= 1 => "<< "{ x = " << x << " }" <<  endl;
+
+	x <<= 2; // same as	x = x << 2
+	cout << "x <<= 2 => "<< "{ x = " << x << " }" <<  endl;
+
+
 
     return 0;
 }
