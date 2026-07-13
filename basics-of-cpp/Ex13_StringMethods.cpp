@@ -6,6 +6,40 @@ int main () {
 
     string firstName, lastName;
     cout << "Enter your first name: "; cin >> firstName;
+    /*
+    When you entered Dev kel and pressed Enter:
+        -> cin >> firstName; grabbed the first word ("Dev") and stopped at the space.
+            It assigned "Dev" to the firstName variable.
+        -> The remaining part of your input ("kel") was left waiting in the computer's internal input buffer.
+        -> When the program moved to the next line (cin >> lastName;),
+            it checked the buffer, found "kel" already waiting there, and immediately assigned it to lastName.
+        -> Because it found what it needed in the buffer, it didn't need to pause and wait for we to type anything else,
+            which is why it instantly printed our menu.
+    To overcome the above case:
+        The cin.ignore() function takes two arguments:
+            the maximum number of characters to ignore, and the character it should stop at.
+            When you write cin.ignore(10000, '\n');, we are giving C++ two specific instructions:
+
+        -> 10000 (The Count): This tells the program to throw away up to 10,000 characters from the input buffer.
+            We use a massive number like 10,000 just to be absolutely safe.
+            If a user accidentally mashed their keyboard and typed "kel is a great guy blah blah blah", 10,000 ensures we delete all of it.
+        -> '\n' (The Delimiter): This represents the "newline" character—which is the exact character created when you press the Enter key.
+            This tells the program, "Stop ignoring things once you hit the end of the line."
+        Incase we doubt over the number 10,000:
+            The "Technically Perfect" Way
+                While 10000 works perfectly fine for most basic programs,
+                we will eventually see professional C++ code that looks like this:
+                Code sample:
+                    #include <limits> // Required at the top of your file
+                    // Inside your main function:
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            Instead of guessing a big number like 10,000,
+            numeric_limits<streamsize>::max() automatically calculates the absolute maximum number of characters our specific computer's buffer can hold.
+            It is the bulletproof version of 10000, but it does the exact same job!
+
+     */
+    cin.ignore(10000,'\n');
+
     cout << "Enter your last name: "; cin >> lastName;
 
     /*
@@ -115,7 +149,29 @@ int main () {
     string multi_special_character_one_string = R"(They are the so-called 'Druid' and "Para" from world of dat and tad.)";
     cout << "For multiple special character one string : " << multi_special_character_one_string << endl;
 
+    /*
+        However, cin considers a space (whitespace, tabs, etc) as a terminating character,
+        which means that it can only store a single word (even if you type many words):
+     */
+    cout << "----------------------------------------------------" << endl;
+    cout << "|   7. User Input Strings for multi-word statement |" << endl;
+    cout << "----------------------------------------------------" << endl;
 
+    // From the example above, you would expect the program to print "Dev Ke", but it only prints "Dev".
+    string full_name;
+    cout << "Type your full name: ";
+    cin >> full_name;
+    cin.ignore(10000,'\n');
+    cout << " Without using getline() :Your full name is: " << full_name << endl;
+
+    /*
+        That's why, when working with strings, we often use the getline() function to read a line of text.
+        It takes cin as the first parameter, and the string variable as second:
+     */
+    string get_full_name;
+    cout << "Type your full name: ";
+    getline (cin, get_full_name);
+    cout << "Using getline() : Your full name is: " << get_full_name << endl;
 
 
     return 0;
