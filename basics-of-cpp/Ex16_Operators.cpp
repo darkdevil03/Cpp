@@ -157,7 +157,7 @@ int main() {
 	// Printing input operator values :
 	cout << "x = "<< x <<"; \t operator_i = " << operator_i << "; \t operator_j = " << operator_j << endl;
 
-	// Logical and : Returns true if both statements are true
+	// Logical and : Returns true if both statements are true.
 	cout << "Logical AND operation : " << "((" << x << " < " << operator_i << ") && (" << x << ">" << operator_j << ")) = "
 		 << (x < operator_i && x > operator_j) << endl;
 
