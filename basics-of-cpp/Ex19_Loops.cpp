@@ -87,5 +87,24 @@ int main() {
             cout << " Inner: " << j << "\n"; // Executes 6 times (3 * 2)
         }
     }
+
+    /*
+     5. The foreach Loop
+        There is also a "for-each loop" (also known as ranged-based for loop), which is used to loop through elements in an array (or other data structures):
+     */
+
+    cout << "------------------------------------------" << endl;
+    cout << "|             5. For each Loop           |" << endl;
+    cout << "------------------------------------------" << endl;
+
+    string word = "Welcome to Cpp!";
+    for (char c : word) {
+        cout << c << "\t";
+
+        if (c == ' ') {
+            cout << endl;
+        }
+    }
+
     return 0;
 }
