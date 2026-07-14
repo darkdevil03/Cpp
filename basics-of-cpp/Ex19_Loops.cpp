@@ -68,6 +68,26 @@ int main() {
     Statement 3 increases a value each time the code block in the loop has been executed: i++
      */
 
+    /*
+    4. Nested Loops
+        It is also possible to place a loop inside another loop. This is called a nested loop.
+        The "inner loop" will be executed one time for each iteration of the "outer loop".
+     */
+    cout << "------------------------------------------" << endl;
+    cout << "|           4. Nested For Loop           |" << endl;
+    cout << "------------------------------------------" << endl;
+
+    // Outer loop
+    for (int i = 1; i <= 3; ++i) {
+        cout << "Outer: " << i << "\n"; // Executes 3 times
+
+        // Inner loop
+        for (int j = 1; j <= 2; ++j) {
+            cout << " Inner: " << j << "\n"; // Executes 6 times (3 * 2)
+        }
+    }
+
+
 
     return 0;
 }
