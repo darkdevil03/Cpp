@@ -87,7 +87,10 @@ int main() {
         We can also place an if statement inside another if.
         This is called a nested if statement.
         A nested if lets you check for a condition only if another condition is already true.
-     */
+    Notes
+        We can nest as many if statements as we want, but avoid making the code too deep - it can become hard to read.
+        Nested if is often used together with else and else if for more complex decision making.
+    */
     cout << "------------------------------------------" << endl;
     cout << "|              5. Nested If              |" << endl;
     cout << "------------------------------------------" << endl;
@@ -100,6 +103,33 @@ int main() {
         }
     }
 
+    /*
+     6. C++ Logical Operators in Conditions
+        We can combine or reverse conditions using logical operators.
+        These work together with if, else, and else if to build more complex decisions.
+            && (AND) - all conditions must be true
+            || (OR) - at least one condition must be true
+            ! (NOT) - reverses a condition (true → false, false → true)
+     */
+    cout << "------------------------------------------" << endl;
+    cout << "|  6. Logical Operators in Conditions    |" << endl;
+    cout << "------------------------------------------" << endl;
+
+    // Use AND (&&) when both conditions must be true:
+    cout << "-------- AND (&&) --------" << endl;
+    cout << "Enter a target that is max than both first num and second num : " << endl;
+    int target;
+    cin >> target;
+
+    if (target < first_num && target < second_num) {
+        cout << target << " is less than both " << first_num << " and " << second_num << endl;
+    }else if (target > first_num && target > second_num) {
+        cout << target << " is greater than both " << first_num << " and " << second_num << endl;
+    }else if (target == first_num && target == second_num) {
+        cout << target << " is equal to both " << first_num << " and " << second_num << endl;
+    }else {
+        cout << target << " is between " << first_num << " and " << second_num << endl;
+    }
 
     return 0;
 }
