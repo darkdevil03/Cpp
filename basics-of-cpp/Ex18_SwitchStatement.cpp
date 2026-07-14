@@ -24,6 +24,7 @@ int main() {
     */
 
     switch(day) {
+
         /*
           A break can save a lot of execution time
           because it "ignores" the execution of all the rest of the code in the switch block.
