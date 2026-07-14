@@ -44,5 +44,30 @@ int main() {
         start--;
     }while (start > 0); // Note: The semicolon ; after the while condition is required!
     cout << "Happy New Year!" << endl;
+
+    /*
+    3. C++ For Loop
+        When we know exactly how many times you want to loop through a block of code,
+        use the for loop instead of a while loop:
+     */
+    cout << "------------------------------------------" << endl;
+    cout << "|               3. For Loop              |" << endl;
+    cout << "------------------------------------------" << endl;
+
+    int number;
+    cout << "Enter a number to print  0 to number : ";
+    cin >> number;
+
+    for (int i = 0; i <= number; i++) {
+        cout << i << " " ;
+    }
+    /*
+    Statement 1 sets a variable before the loop starts: int i = 0
+    Statement 2 defines the condition for the loop to run: i <= number. If the condition is true,
+                the loop will start over again, if it is false, the loop will end.
+    Statement 3 increases a value each time the code block in the loop has been executed: i++
+     */
+
+
     return 0;
 }
