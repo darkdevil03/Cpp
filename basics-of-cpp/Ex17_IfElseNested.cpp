@@ -115,11 +115,12 @@ int main() {
     cout << "|  6. Logical Operators in Conditions    |" << endl;
     cout << "------------------------------------------" << endl;
 
-    // Use AND (&&) when both conditions must be true:
-    cout << "-------- AND (&&) --------" << endl;
     cout << "Enter a target that is max than both first num and second num : " << endl;
     int target;
     cin >> target;
+
+    // Use AND (&&) when both conditions must be true:
+    cout << "-------- AND (&&) --------" << endl;
 
     if (target < first_num && target < second_num) {
         cout << target << " is less than both " << first_num << " and " << second_num << endl;
@@ -130,6 +131,25 @@ int main() {
     }else {
         cout << target << " is between " << first_num << " and " << second_num << endl;
     }
+
+    // Use OR (||) when at least one of the conditions can be true:
+    cout << "-------- OR (||) --------" << endl;
+
+    if (target > first_num || target > second_num) {
+        cout << target << " is greater than anyone or both " << first_num << " and " << second_num << endl;
+    }
+
+    /*
+    The NOT operator (!) reverses a condition:
+        If a condition is true,! makes it false.
+        If a condition is false,! makes it true.
+        This is useful when you want to check that something is not the case.
+     */
+    cout << "-------- Not (!) --------" << endl;
+    if (!(first_num > second_num)) {
+        cout << first_num << " is not greater than " << second_num << endl;
+    }
+
 
     return 0;
 }
