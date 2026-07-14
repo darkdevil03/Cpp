@@ -82,5 +82,24 @@ int main() {
     string isAnyInputSingleDigit = (first_num <= 9)?" => Yes, First num is single placed digit" : ((second_num <= 9)?" => Yes, Second num is single placed digit" : " both inputs aren't single placed digit!");
     cout << isAnyInputSingleDigit << endl;
 
+    /*
+    5. Nested If
+        We can also place an if statement inside another if.
+        This is called a nested if statement.
+        A nested if lets you check for a condition only if another condition is already true.
+     */
+    cout << "------------------------------------------" << endl;
+    cout << "|              5. Nested If              |" << endl;
+    cout << "------------------------------------------" << endl;
+
+    if (first_num <= 9) {
+        // code to run if condition1 is true
+        if (second_num <= 9) {
+            // code to run if both condition1 and condition2 are true
+            cout << first_num << " and  " << second_num << " => Both input nums are single placed digits.." << endl;
+        }
+    }
+
+
     return 0;
 }
