@@ -87,8 +87,5 @@ int main() {
             cout << " Inner: " << j << "\n"; // Executes 6 times (3 * 2)
         }
     }
-
-
-
     return 0;
 }
