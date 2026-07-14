@@ -72,7 +72,8 @@ int main() {
     4. Nested Loops
         It is also possible to place a loop inside another loop. This is called a nested loop.
         The "inner loop" will be executed one time for each iteration of the "outer loop".
-     */
+        Nested loops are useful when working with tables, matrices, or multi-dimensional data structures.
+    */
     cout << "------------------------------------------" << endl;
     cout << "|           4. Nested For Loop           |" << endl;
     cout << "------------------------------------------" << endl;
