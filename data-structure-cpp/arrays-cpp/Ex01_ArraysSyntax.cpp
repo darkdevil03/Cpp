@@ -13,13 +13,15 @@ int main() {
     // To insert values to it, we can use an array literal - place the values in a comma-separated list, inside curly braces:
     string programming[4] = {"C", "C++","Java","Python"};
 
+    // Loop through strings
+
     // Printing using for loop
     for (int i = 0; i < size(programming) ; i++) {
         cout << programming[i] << "\t";
     }
 
     // Printing using for-each loop
-    for (string s : programming) {
+        for (string s : programming) {
         cout << s << endl;
     }
 
