@@ -22,6 +22,7 @@ int main() {
     }
 
     // Printing using for-each loop
+    // Note that, in C++ version 11 (2011) foreach loop, which is even cleaner and simpler:
         for (string s : programming) {
         cout << s << endl;
     }
