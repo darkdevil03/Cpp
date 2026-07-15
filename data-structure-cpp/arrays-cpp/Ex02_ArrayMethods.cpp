@@ -33,8 +33,5 @@ int main() {
     // another way for length/ size of array :
     cout << "Array length using size() method : " << size(programming) << endl;
 
-
-
-
     return 0;
 }
