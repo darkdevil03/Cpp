@@ -59,7 +59,9 @@ int main() {
     // Dereference: Output the value of food with the pointer (Pizza)
     cout << "Dereference ptr = " << *ptr << "\n";
 
+    // modifying the *ptr value, not the address
     *ptr = "sat";
+
     cout << "Dereference ptr = " << *ptr << "\n";
     cout << "food -> " << food << "\n";
 
