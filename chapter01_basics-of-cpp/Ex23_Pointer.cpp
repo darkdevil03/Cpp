@@ -33,6 +33,11 @@ int main() {
     cout << endl ;
 
     /*
+        string food2 = "ok";
+        ptr = &food2;  // no locked-in allowed for ptr. whereas, for references locked-in allowed.
+    */
+
+    /*
      2. C++ Dereference : Get Memory Address and Value
             In the above example, we used the pointer variable to get the memory address of a variable (used together with the & reference operator).
             However, we can also use the pointer to get the value of the variable, by using the * operator (the dereference operator)
@@ -56,7 +61,9 @@ int main() {
 
     *ptr = "sat";
     cout << "Dereference ptr = " << *ptr << "\n";
-    cout << "Pointer food -> " << food << "\n";
+    cout << "food -> " << food << "\n";
+
+    // cout << " food2 = " << food2 << "\n"; // if *ptr alter to food2 means check this.
 
 
     return 0;
@@ -107,8 +114,8 @@ int main() {
                 It looks and feels exactly like we are using the original variable.
 
         3. References are "Locked In" (Strict Rules)
-            Pointers can change their mind: A pointer can point to food on line 10,
-                                            and then we can tell it to point to drink on line 20.
+            Pointers can change their mind: A pointer can point to food on line 22,
+                                            and then we can tell it to point to drink on line 37.
 
             References are loyal forever: Once we say string &meal = food;, meal is locked to food for its entire existence.
                                           we cannot re-assign a reference to point to a different variable later.
