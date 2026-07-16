@@ -24,6 +24,12 @@ struct {             // Structure declaration
         This means that we can create variables with this structure anywhere in the program at any time.
         To create a named structure, put the name of the structure right after the struct keyword
  */
+// This structure is now named "car"
+struct car {
+    string brand;
+    string model;
+    int year;
+};
 
 int main () {
     // 1. usage of struct without named structure
@@ -38,19 +44,30 @@ int main () {
     myStructure2.myString = "Dev";
 
     // Print members of myStructure
-    cout << "Structure-1 : "<< endl;
-    cout << myStructure1.myNum << endl;
-    cout << myStructure1.myString << endl;
+    cout << "Without Name Structure : "<< endl;
+    cout << "Structure-1 : " << "\t" << myStructure1.myNum << "\t" << myStructure1.myString << endl;
+    cout << "Structure-2 : " << "\t" << myStructure2.myNum << "\t" << myStructure2.myString << endl;
 
-    // Print members of myStructure
-    cout << "Structure-2 : "<< endl;
-    cout << myStructure2.myNum << endl;
-    cout << myStructure2.myString << endl;
-
+    cout << endl;
 
     // 2. Named Structure:
 
+    // To declare a variable that uses the structure,
+    // use the name of the structure as the data type of the variable:
+    car myCar1;
+    myCar1.brand = "TATA";
+    myCar1.model = "Maria";
+    myCar1.year = 2019;
 
+    car myCar2;
+    myCar2.brand = "Audi";
+    myCar2.model = "C2";
+    myCar2.year = 2020;
+
+    cout << "Named Structure : "<< endl;
+    // Print the structure members
+    cout << myCar1.brand << "\t" << myCar1.model << "\t" << myCar1.year << endl;
+    cout << myCar2.brand << "\t" << myCar2.model << "\t" << myCar2.year << endl;
 
     return 0;
 }
