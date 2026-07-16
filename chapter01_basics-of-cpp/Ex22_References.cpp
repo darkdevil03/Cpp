@@ -13,8 +13,13 @@ int main() {
     cout << "------------------------------------------" << endl;
 
     string food = "Chicken Biryani";
-    auto &meal = food; // auto keyword automatically detect type at compiler.
 
+    auto &meal = food; // auto keyword automatically detect type at compiler.
+    /*
+     * reassign address won't allowed in references, whereas in pointer it will reassign!
+          string ten = "10";
+          &meal = ten;
+      */
     // Now, we can use either food or meal to refer to the same value.
     cout  << "food -> " << food << "\t |  meal (References variable) -> " << meal << endl;
 
