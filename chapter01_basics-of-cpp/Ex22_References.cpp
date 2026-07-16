@@ -1,17 +1,22 @@
 #include <iostream>
 using namespace std;
+
+int main() {
+
     /*
-       Creating References
+     1. Creating References
         A reference variable is an alias for an existing variable.
         It is created using the & operator
-     */
-int main() {
+    */
+    cout << "------------------------------------------" << endl;
+    cout << "|              1. References             |" << endl;
+    cout << "------------------------------------------" << endl;
 
     string food = "Chicken Biryani";
     auto &meal = food; // auto keyword automatically detect type at compiler.
 
     // Now, we can use either food or meal to refer to the same value.
-    cout << "meal -> " << meal << "\t food -> " << food << endl;
+    cout  << "food -> " << food << "\t |  meal (References variable) -> " << meal << endl;
 
     /*
        Note: Both food and meal refer to the same memory location. Changing one affects the other.
@@ -19,9 +24,31 @@ int main() {
         because they both refer to the same memory location.
      */
     meal = "Sambar Rice";
-    cout << "Meal value altered -> " << meal << endl;
+    cout << "meal value altered -> " << meal << endl;
 
-    cout << "Then food -> " << food << endl;
+    cout << "Then food will be -> " << food << endl;
+
+    cout << endl;
+    /*
+     2. Memory Address
+        In the example from the previous food variable, the & operator was used to create a reference variable.
+        But it can also be used to get the memory address of a variable;
+        which is the location of where the variable is stored on the computer.
+        When a variable is created in C++, a memory address is assigned to the variable.
+        And when we assign a value to the variable, it is stored in this memory address.
+
+        To access it, use the & operator, and the result will represent where the variable is stored:
+     */
+
+    // Note: The memory address is in hexadecimal form (0x..).
+    //       And also that we may not get the same result in your program.
+
+    cout << "------------------------------------------" << endl;
+    cout << "|            2. Memory Address           |" << endl;
+    cout << "------------------------------------------" << endl;
+
+    cout << "Address of food : " << &food << endl;
+    cout << "Address of meal : " << &meal << endl;
 
     return 0;
 }
