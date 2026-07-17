@@ -22,7 +22,7 @@ void firstFunction() {
     cout << "My First function implementation!" << endl; // statements
 }
 
-void secondFunction();
+void secondFunction(); // declaration
 
 int main() {
     /*
@@ -46,7 +46,7 @@ int main() {
     We will often see C++ programs that have function declaration above main(), and function definition below main().
     This will make the code better organized and easier to read: as example secondFunction()
  */
-void secondFunction() {
+void secondFunction() { // implementation
     cout << "My Second function implementation!" << endl;
 }
 
