@@ -6,7 +6,7 @@ using namespace std;
         Information can be passed to functions as a parameter.
         Parameters act as variables inside the function.
         Parameters are specified after the function name, inside the parentheses.
-        We can add as many parameters as you want, just separate them with a comma:
+        We can add as many parameters as we want, just separate them with a comma:
  */
 
 void parametersAndArguments(string input) { // string input: parameter
