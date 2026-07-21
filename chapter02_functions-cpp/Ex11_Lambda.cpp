@@ -15,18 +15,29 @@ using namespace std;
 
 int main() {
 
+    // 1. Lambda without Parameters
+
+    cout << "------------------------------------------" << endl;
+    cout << "|     1. Lambda without Parameters       |" << endl;
+    cout << "------------------------------------------" << endl;
+
     auto messageVoid = []() -> void {
-        cout << "Hello world, This is void type " << endl;
+        cout << "Void type without parameter : " << "Hello world, This is void type!" << endl;
     };
 
     messageVoid();
 
-    auto messageString = []() -> string{
+    // For without parameter, we can simply use  auto messageString = {| []{code}; or []->type{code}; |}
+    // As shown in below lambda function :
+    auto messageString = [] {
         //return "Hello World!";
         return "Hello World, This is a string type!";
     };
 
     cout << "String type without parameter : "<< messageString() << endl;
+
+
+    // 2. Lambda with Parameters
 
 
     return 0;
