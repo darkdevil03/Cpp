@@ -1,4 +1,4 @@
-#include <functional>
+#include <functional> // For, 3. Passing Lambdas to Functions
 #include <iostream>
 using namespace std;
 
@@ -105,6 +105,24 @@ int main() {
     };
 
     standardFunction2(messageParameter("dev"));
+
+
+    cout << endl;
+
+    // 4. Capture Clause []
+
+    cout << "------------------------------------------" << endl;
+    cout << "|           4. Capture Clause []         |" << endl;
+    cout << "------------------------------------------" << endl;
+
+    int x = 10;
+    auto show = [x]() {
+        cout << "Accessing the outside value" << x;
+    };
+
+    show();
+
+
 
 
     return 0;
