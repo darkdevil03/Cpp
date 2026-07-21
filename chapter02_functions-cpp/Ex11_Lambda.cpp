@@ -122,7 +122,23 @@ int main() {
 
     show();
 
+    cout << endl;
 
+    // 5. Using Lambdas in Loops
+    // We can define and use a lambda function inside a loop, which are great for quick actions:
+
+    cout << "------------------------------------------" << endl;
+    cout << "|        5. Using Lambdas in Loops       |" << endl;
+    cout << "------------------------------------------" << endl;
+
+    for (auto i = 1; i <= 4; ++i) {
+        // using capture clause []: for accessing outside values
+        auto messageIterate = [i] {
+            cout << "Count " << i << endl;
+        };
+
+        messageIterate();
+    }
 
 
     return 0;
