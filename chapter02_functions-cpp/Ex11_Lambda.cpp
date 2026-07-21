@@ -1,3 +1,4 @@
+#include <functional>
 #include <iostream>
 using namespace std;
 
@@ -13,9 +14,28 @@ using namespace std;
         [capture] (parameters) -> data_type { code }; // "-> data_type" is optional
  */
 
+
+
+// The below functions belongs to { 3. Passing Lambdas to Functions} concept
+
+void standardFunction(function<void()> func){
+    func();
+    cout << "In this we use function (from the <functional> library : void standardFunction(function<void()> func) {func();}" << endl;
+}
+
+// In case of void with auto we get error due strict validation of type of function library.
+// To overcome that we have aAnother way of accepting lambda function using template concept:
+template <typename  CustomType> // Custom type using template
+void standardFunction2(CustomType printFunc) {
+    cout << "String Parameter Passed : "<< printFunc << endl;
+    cout << "Using Standard Templates: template <typename  CustomType> \n \t \t \t  void standardFunction2(CustomType printFunc) { prinFunc; } " << endl;
+}
+
+// main function
 int main() {
 
     // 1. Lambda without Parameters
+    // Here, message holds a lambda function that prints a message to the screen:
 
     cout << "------------------------------------------" << endl;
     cout << "|       1. Lambda without Parameters     |" << endl;
@@ -39,6 +59,7 @@ int main() {
     cout << endl;
 
     // 2. Lambda with Parameters
+    // We can pass values into a lambda just like a regular function:
 
     cout << "------------------------------------------" << endl;
     cout << "|       2. Lambda with Parameters        |" << endl;
@@ -59,10 +80,37 @@ int main() {
     cout << endl;
 
     // 3. Passing Lambdas to functions
+    /*
+        We can also pass a lambda function as an argument to another function.
+        This is useful when we want to tell a function what to do, not just what data to use.
+        In the example below, we send a small lambda function with and without parameter to another function, which then runs it twice:
+     */
 
     cout << "------------------------------------------" << endl;
     cout << "|     3. Passing Lambdas to Functions    |" << endl;
     cout << "------------------------------------------" << endl;
 
+    // Lambda without parameter
+    auto message = [] {
+        cout << "Without Parameter : This message passed from lambda function to another standard function!" << endl;
+    };
+
+    standardFunction(message);
+
+    cout << endl;
+
+    // Lambda with parameter
+    auto messageParameter = [](string name) -> string {
+        return name;
+    };
+
+    standardFunction2(messageParameter("dev"));
+
+
     return 0;
 }
+
+
+
+
+
