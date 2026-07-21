@@ -110,19 +110,62 @@ int main() {
     cout << endl;
 
     // 4. Capture Clause []
+    /*
+        We can use the [ ] brackets to give a lambda access to variables outside of it.
+        This is called the capture clause.
+        In this example, the lambda captures the variable x by value (a copy):
+     */
 
     cout << "------------------------------------------" << endl;
     cout << "|           4. Capture Clause []         |" << endl;
     cout << "------------------------------------------" << endl;
 
+    // a) Capture by Value
+    cout << "\n-------a) Capture by Value-------"<< endl;
     int x = 10;
-    auto show = [x]() {
-        cout << "Accessing the outside value" << x;
+    auto CaptureByValue = [x]() {
+        // x = 1; // We can't change the value of x due the clause make 'x' read-only in the lambda via capture.
+        // (Cannot assign to readonly type)
+        cout << "Accessing the outside value using capture clause [] x "<< endl;
+        cout << "Inside Lambda : At CaptureByValue method x = " << x;
     };
 
-    show();
+    cout << "Before x changes: x = " << x << endl;
+
+    // We don't have permission to change x in lambda function.
+    // So, we change outside then we call the CaptureByValue() lambda.
+    x++;
+
+    /*
+      Note:
+        The lambda uses a copy of x. If we change x after defining the lambda,
+        it won't affect the value inside the lambda.
+    */
+    cout <<"x value increased by 1 " << endl;
+    CaptureByValue();
+    cout << "\nOutside Lambda: At main method x = "<< x << endl;
+
+    // b) Capture by Reference
+
+    cout << "\n-------b) Capture by Reference-------"<< endl;
+
+    int y = 20;
+
+    auto CaptureByReference = [&y]() {
+        cout << "Accessing the outside value using capture reference " << y << endl;
+        cout << "Inside Lambda : At CaptureByReference method y = " << y;
+    };
+
+    cout << "Before y changes: y = " << y << endl;
+    y++;
+    cout <<"y value increased by 1 " << endl;
+
+    CaptureByReference(); // // Change y after the lambda is created
+
+    cout << "\nOutside Lambda: At main method y = "<< y << endl;
 
     cout << endl;
+
 
     // 5. Using Lambdas in Loops
     // We can define and use a lambda function inside a loop, which are great for quick actions:
@@ -131,7 +174,7 @@ int main() {
     cout << "|        5. Using Lambdas in Loops       |" << endl;
     cout << "------------------------------------------" << endl;
 
-    for (auto i = 1; i <= 4; ++i) {
+    for (auto i = 1; i <= 4; i++) {
         // using capture clause []: for accessing outside values
         auto messageIterate = [i] {
             cout << "Count " << i << endl;
@@ -139,6 +182,7 @@ int main() {
 
         messageIterate();
     }
+
 
 
     return 0;
