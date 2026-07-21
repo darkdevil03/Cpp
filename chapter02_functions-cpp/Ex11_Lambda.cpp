@@ -9,15 +9,25 @@ using namespace std;
 
     Syntax
         [capture] (parameters) { code };
+                        or
+        [capture] (parameters) -> data_type { code }; // "-> data_type" is optional
  */
 
 int main() {
 
-    auto message = [](){
-        //return "Hello World!";
-        return "Hello World!";
+    auto messageVoid = []() -> void {
+        cout << "Hello world, This is void type " << endl;
     };
 
-    cout << message();
+    messageVoid();
+
+    auto messageString = []() -> string{
+        //return "Hello World!";
+        return "Hello World, This is a string type!";
+    };
+
+    cout << "String type without parameter : "<< messageString() << endl;
+
+
     return 0;
 }
