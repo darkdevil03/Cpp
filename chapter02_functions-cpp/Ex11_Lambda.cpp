@@ -4,8 +4,8 @@ using namespace std;
 
 /*
     Lambda Functions
-        A lambda function is a small, anonymous function you can write directly in your code.
-        It's useful when you need a quick function without naming it or declaring it separately.
+        A lambda function is a small, anonymous function We can write directly in our code.
+        It's useful when We need a quick function without naming it or declaring it separately.
         Think of it as a "mini function on the fly."
 
     Syntax
@@ -183,10 +183,24 @@ int main() {
         messageIterate();
     }
 
-
-
+    
     return 0;
 }
+
+/*
+    Regular Functions vs Lambda Functions
+        Both regular functions and lambda functions let We group code and run it later, but they are used in slightly different situations.
+
+        Use a regular function when:
+            We plan to reuse the function in multiple places
+            We want to give the function a clear, meaningful name
+            The logic is long or complex
+        
+        Use a lambda function when:
+            We only need the function once
+            The code is short and simple
+            We want to pass a quick function into another function
+ */
 
 
 
