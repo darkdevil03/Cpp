@@ -18,7 +18,7 @@ int main() {
     // 1. Lambda without Parameters
 
     cout << "------------------------------------------" << endl;
-    cout << "|     1. Lambda without Parameters       |" << endl;
+    cout << "|       1. Lambda without Parameters     |" << endl;
     cout << "------------------------------------------" << endl;
 
     auto messageVoid = []() -> void {
@@ -36,9 +36,33 @@ int main() {
 
     cout << "String type without parameter : "<< messageString() << endl;
 
+    cout << endl;
 
     // 2. Lambda with Parameters
 
+    cout << "------------------------------------------" << endl;
+    cout << "|       2. Lambda with Parameters        |" << endl;
+    cout << "------------------------------------------" << endl;
+
+    auto addTwoNumber = [](int num1, int num2) -> int {
+        return num1 + num2;
+    };
+
+    cout << "Addition of two numbers : " << addTwoNumber(4,8) << endl;
+
+    auto multiplyTwoNumber = [](int num1, int num2) {
+        return num1 * num2;
+    };
+
+    cout << "Multiplication of two numbers : " << multiplyTwoNumber(4,8) << endl;
+
+    cout << endl;
+
+    // 3. Passing Lambdas to functions
+
+    cout << "------------------------------------------" << endl;
+    cout << "|     3. Passing Lambdas to Functions    |" << endl;
+    cout << "------------------------------------------" << endl;
 
     return 0;
 }
