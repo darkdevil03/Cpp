@@ -3,14 +3,13 @@ using namespace std;
 
 class myClass {
     public:
-    void showMyClass() {
+    static void showMyClass() {
         cout << "showMyClass" << endl;
     }
 
 };
 int main() {
-    myClass obj;
-    obj.showMyClass();
+    myClass::showMyClass();
 
     return 0;
 }
