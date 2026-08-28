@@ -5,22 +5,29 @@ struct struct_test{
     int id;
     char name[20];
     int age;
-}user;
+}user[20];
 
 
 int main(){
 
-    cout << "Enter your Id: " << endl;
-    cin >> user.id;
-    cout << "Enter your name: " << endl;
-    cin >> user.name;
-    cout << "Enter your age: " << endl;
-    cin >> user.age;
+    for (int i = 0; i < 3; i++) {
+        cout << "Enter your Id: " << endl;
+        cin >> user[i].id;
+        cout << "Enter your name: " << endl;
+        cin >> user[i].name;
+        cout << "Enter your age: " << endl;
+        cin >> user[i].age;
+    }
+
 
     cout << "Entered Details: " << endl;
-    cout << user.id << endl;
-    cout << user.name << endl;
-    cout << user.age << endl;
+
+    for (auto & i : user) {
+        cout << "User ID: " << i.id << endl;
+        cout << "User Name: " << i.name << endl;
+        cout << "User Age: " <<  i.age << endl;
+    }
+
 
     return 0;
 }
