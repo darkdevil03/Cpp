@@ -10,7 +10,7 @@ struct struct_test{
 
 int main(){
 
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 20; i++) {
         cout << "Enter your Id: " << endl;
         cin >> user[i].id;
         cout << "Enter your name: " << endl;
@@ -22,10 +22,11 @@ int main(){
 
     cout << "Entered Details: " << endl;
 
-    for (auto & i : user) {
-        cout << "User ID: " << i.id << endl;
-        cout << "User Name: " << i.name << endl;
-        cout << "User Age: " <<  i.age << endl;
+    for (int i = 0; i < 20; i++) {
+        cout << "User ID: " << user[i].id << endl;
+        cout << "User Name: " << user[i].name << endl;
+        cout << "User Age: " <<  user[i].age << endl;
+        cout << endl;
     }
 
 
