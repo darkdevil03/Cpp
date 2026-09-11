@@ -7,5 +7,7 @@ int main() {
     string input;
     fgets(getline(cin,input,'\n'));
 
+    cout << "Enter the input : " <<input << endl;
+
     return 0;
 }
