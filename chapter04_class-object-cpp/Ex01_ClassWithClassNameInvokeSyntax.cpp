@@ -8,6 +8,7 @@ class myClass {
     }
 
 };
+
 int main() {
     myClass::showMyClass();
 
