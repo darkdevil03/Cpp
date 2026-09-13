@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 class testClass {
@@ -9,6 +10,7 @@ class testClass {
 };
 
 int main() {
+
     testClass test; // object
     test.testMethod(); // invoking the method using class variable (object);
 
