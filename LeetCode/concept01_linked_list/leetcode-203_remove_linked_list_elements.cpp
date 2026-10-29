@@ -10,6 +10,8 @@
  *     struct ListNode *next;
  * };
  */
+
+// Solution - 1
 struct ListNode* removeElements(struct ListNode* head, int val) {
 
     struct ListNode* travel = head;
@@ -36,4 +38,28 @@ struct ListNode* removeElements(struct ListNode* head, int val) {
     }
 
     return newHead;
+}
+
+// Solution - 2
+struct ListNode* removeElements(struct ListNode* head, int val) {
+    // Create a dummy node that points to the head
+    struct ListNode dummy;
+    dummy.next = head; // Here, the head hold copy of original_head address. Then copy to dummy.next.
+
+    struct ListNode* prev = &dummy;
+    struct ListNode* travel = head;
+
+    while (travel != NULL) {
+        if (travel->val == val) {
+            // Skip the current node
+            prev->next = travel->next; // Here, head value is updating via head address's
+        } else {
+            // Move prev forward only if we didn't delete the node
+            prev = travel;
+        }
+        travel = travel->next;
+    }
+
+    // The real new head is whatever follows the dummy node
+    return dummy.next;
 }
