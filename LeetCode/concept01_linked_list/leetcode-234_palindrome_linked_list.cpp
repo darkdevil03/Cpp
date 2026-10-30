@@ -3,6 +3,8 @@
         https://leetcode.com/problems/palindrome-linked-list
  */
 
+// Full working code written,
+// if you are referring for solution function find below from line 48.
 #include <iostream>
 using namespace std;
 
