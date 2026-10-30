@@ -2,6 +2,7 @@
     LeetCode Question 206:
         https://leetcode.com/problems/reverse-linked-list
  */
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -9,6 +10,7 @@
  *     struct ListNode *next;
  * };
  */
+
 struct ListNode* reverseList(struct ListNode* head) {
     struct ListNode* current = head;
     struct ListNode* prev = NULL;
@@ -22,5 +24,4 @@ struct ListNode* reverseList(struct ListNode* head) {
     }
 
     return prev;
-
 }
