@@ -10,6 +10,7 @@
  *     struct ListNode *next;
  * };
  */
+
 struct ListNode* middleNode(struct ListNode* head) {
     struct ListNode* slow = head;
     struct ListNode* fast = head;
