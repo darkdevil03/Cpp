@@ -62,7 +62,31 @@ void myLinkedListAddAtTail(MyLinkedList* obj, int val) {
 }
 
 void myLinkedListAddAtIndex(MyLinkedList* obj, int index, int val) {
+    if(val > obj->size){
+        return;
+    }
 
+    if (index <= 0) {
+        myLinkedListAddAtHead(obj, val);
+        return;
+    }
+    if (index == obj->size) {
+        myLinkedListAddAtTail(obj, val);
+        return;
+    }
+
+    Node temp* = (Node *) malloc (sizeof(Node));
+    temp -> val = val;
+
+    Node* cur = obj -> head;
+
+    for(i= 0; i < index - 1 ;i++){
+        cur = cur -> next;
+    }
+
+    temp -> next = cur -> next;
+    cur -> next = temp;
+    obj -> size++;
 }
 
 void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
