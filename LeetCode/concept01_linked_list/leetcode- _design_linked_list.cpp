@@ -83,9 +83,9 @@ void myLinkedListAddAtIndex(MyLinkedList* obj, int index, int val) {
     for(i= 0; i < index - 1 ;i++){
         cur = cur -> next;
     }
-
     temp -> next = cur -> next;
     cur -> next = temp;
+
     obj -> size++;
 }
 
